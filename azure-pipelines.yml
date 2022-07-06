@@ -38,7 +38,7 @@ steps:
     containerRegistry: 'dcv1'
     repository: 'newrepo2'
     command: 'build'
-    Dockerfile: '/repofolder/Dockerfile'
+    Dockerfile: '/home/vsts/work/1/s/repofolder/Dockerfile'
 
 - task: Docker@2
   inputs:
