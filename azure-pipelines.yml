@@ -23,7 +23,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '/home/vsts/work/1/s/Dockerfile'
+    SourceFolder: '/home/vsts/work/1/s'
     Contents: '**'
     TargetFolder: '/home/vsts/work/1/s/repofolder'
 
