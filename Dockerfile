@@ -8,7 +8,7 @@ FROM openjdk:11 as build
 ARG JAR_FILE=tsb_main-0.0.1-SNAPSHOT.jar
 
 # cd /opt/app
-WORKDIR /home/vsts/work/1/s/
+WORKDIR /home/vsts/work/1/s/repofolder
 
 # cp target/tsb_main-0.0.1-SNAPSHOT.jar /opt/app/app.jar
 COPY ${JAR_FILE} tsb-mbass.jar
