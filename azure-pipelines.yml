@@ -18,15 +18,30 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
+- script: cd /home/vsts/work/1/s/ ; ls;
+  displayName: All before copy
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '/home/vsts/work/1/s/Dockerfile'
+    Contents: '**'
+    TargetFolder: '/home/vsts/work/1/s/repofolder'
+
+- script: cd /home/vsts/work/1/s/ ; ls;
+  displayName: after copy
+
+- script: cd /home/vsts/work/1/s/repofolder ; ls;
+  displayName: inside repo folder
+
 - task: Docker@2
   inputs:
     containerRegistry: 'dcv1'
-    repository: 'newrepo'
+    repository: 'newrepo2'
     command: 'build'
     Dockerfile: 'Dockerfile'
 
 - task: Docker@2
   inputs:
     containerRegistry: 'dcv1'
-    repository: 'newrepo'
+    repository: 'newrepo2'
     command: 'push'
