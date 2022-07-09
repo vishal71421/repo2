@@ -22,5 +22,5 @@ steps:
     Contents: '**'
     TargetFolder: '$(Build.SourcesDirectory)/repofolder'
 
-- script: cd $(Build.SourcesDirectory)/repofoilder ; ls;
+- script: cd $(Build.SourcesDirectory)/repofolder ; ls;
   displayName: repofolder
